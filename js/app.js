@@ -20,6 +20,14 @@ $(function () {
   new WOW().init();
 });
 
+$(function () {
+  $(".course-menu__heading").on("click", function (e) {
+    e.preventDefault();
+
+    $(this).toggleClass("active").siblings(".course-menu__list").slideToggle();
+  });
+});
+
 // menu toggle
 
 $(function () {
@@ -206,47 +214,6 @@ $(function () {
       },
       992: {
         slidesPerView: 3
-      }
-    }
-  });
-});
-
-// student-slider
-$(function () {
-  addSwiper(".student-slider", {
-    pagination: true,
-    slidesPerView: 1,
-    breakpoints: {
-      768: {
-        slidesPerView: 2
-      },
-      1200: {
-        slidesPerView: 3
-      },
-      1400: {
-        slidesPerView: 3,
-        spaceBetween: 40
-      }
-    }
-  });
-});
-
-// teacher-slider
-$(function () {
-  addSwiper(".teacher-slider", {
-    pagination: true,
-    navigation: true,
-    loop: true,
-    slidesPerView: 1,
-    breakpoints: {
-      576: {
-        slidesPerView: 2
-      },
-      992: {
-        slidesPerView: 3
-      },
-      1200: {
-        slidesPerView: 4
       }
     }
   });
